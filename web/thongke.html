@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/asset/css/dashboard.css">
+    <link rel="stylesheet" href="/asset/css/themify-icons-font/themify-icons/themify-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Dashboard</title>
+    <style>
+        .thongk {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 cột */
+            gap: 20px;
+            width: 90%; /* Khung rộng 1800px */
+            height: 80%; /* Khung cao 800px */
+            margin: 0 auto;
+            background-color: #fff; /* Màu nền của thẻ div */
+            padding: 20px;
+            border: 1px solid #ccc; /* Đường viền nhẹ */
+        }
+
+        .chart-item {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+
+        canvas {
+            max-width: 90%; /* Giới hạn chiều rộng tối đa của biểu đồ */
+            max-height: 90%; /* Giới hạn chiều cao tối đa của biểu đồ */
+        }
+
+        h2, h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            
+            <div class="header-content">
+                <div class="first">
+                        <img src="../asset/img/logo.png" alt="logo" class="logo">
+                        <input type="text" placeholder="Tìm Kiếm..." class="search">
+                        <i class="ti-search"></i>
+                    </div>
+                    
+                    <div class="second">
+                        <img src="../asset/img/avatar.jpg" alt="avatar" class="ava">
+                        <p class="name">Đỗ Minh Khoa</p>
+                        <input type="checkbox" hidden id="btnlogout" class="btnlogout">
+                        <label for="btnlogout"><i class="ti-angle-down"></i></label>
+                        <div class="logout">
+                        <div class="logoutcontent">
+                            <i class="ti-key"></i>
+                            <a href="" class="logoutlink">Đổi mật khẩu</a>
+                            </div>        
+                        <div class="logoutcontent">
+                            <i class="ti-shift-right"></i>
+                            <a href="../index.html" class="logoutlink">Đăng xuất</a>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    
+            
+            <div class="header-menu">
+                <div class="logomobile"><img src="../asset/img/logo.png" alt="logo" class="logo"></div>
+                
+                <div class="menumobile">
+                    <label for="btnmenu"><i class="ti-menu"></i></label>
+                </div>
+            </div>
+            
+        </div>
+        <input type="checkbox" class="btnmenu" id="btnmenu" hidden> 
+        <label for="btnmenu" class="nav-overlay"></label>
+        <div class="navmobile">
+            <div class="secondmobile">
+                <div class="user">
+                    <img src="../asset/img/avatar.jpg" alt="avatar" class="avamobile">
+                    <p class="namemobile">Đỗ Minh Khoa</p>
+                </div>
+                <label for="btnmenu" class="btnout"><i class="ti-close"></i></label>
+            </div>
+           
+            <div class="nav-linkdiv-mobile"><a href="dashboard.html" class="nav-link-mobile">Trang chủ</a></div>
+                <div class="nav-linkdiv-mobile"><a href="hosodangvien.html" class="nav-link-mobile">Hồ sơ Đảng viên</a></div>
+                <div class="nav-linkdiv-mobile"><a href="tochuccbvadb.html" class="nav-link-mobile">Tổ chức chi bộ và Đảng bộ</a></div>
+                <div class="nav-linkdiv-mobile"><a href="khenthuong.html" class="nav-link-mobile">Khen thưởng và kỷ luật</a></div>
+                <div class="nav-linkdiv-mobile"><a href="thongke.html" class="nav-link-mobile">Báo cáo và thống kê</a></div>
+                <div class="nav-linkdiv-mobile"><a href="tailieu.html" class="nav-link-mobile">Tài liệu Đảng</a></div>
+                <div class="nav-linkdiv-mobile"><a href="" class="nav-link-mobile">Đổi mật khẩu</a></div>
+                <div class="nav-linkdiv-mobile"><a href="" class="nav-link-mobile">Đăng xuất</a></div>
+        </div>
+        <div class="body">
+            <div class="navi">
+            <div class="emblem">
+                <img src="../asset/img/emblem.png" alt="emblem" class="img-emblem">
+            </div>
+            <div class="nav-linkdiv"><a href="dashboard.html" class="nav-link">Trang chủ</a></div>
+            <div class="nav-linkdiv"><a href="hosodangvien.html" class="nav-link">Hồ sơ Đảng viên</a></div>
+            <div class="nav-linkdiv"><a href="tochuccbvadb.html" class="nav-link">Tổ chức chi bộ và Đảng bộ</a></div>
+            <div class="nav-linkdiv"><a href="khenthuong.html" class="nav-link">Khen thưởng và kỷ luật</a></div>
+            <div class="nav-linkdiv"><a href="thongke.html" class="nav-link">Báo cáo và thống kê</a></div>
+            <div class="nav-linkdiv"><a href="tailieu.html" class="nav-link">Tài liệu Đảng</a></div>
+            <div class="quocky">
+                <img src="../asset/img/quocky.png" alt="" class="img-quocky">
+            </div>
+            </div>
+            <div class="news">
+                <div class="tieude"><h1>BÁO CÁO VÀ THỐNG KÊ</h1></div>
+                <div class="thongk">
+                    <div class="chart-item">
+                        <h1>Thống kê khen thưởng và kỷ luật</h1>
+                        <canvas id="pieChart"></canvas>
+                    </div>
+                    <div class="chart-item">
+                        <h1>Thống kê số lượng đảng viên mới</h1>
+                        <canvas id="barChart"></canvas>
+                    </div>
+                </div>  
+                <script>
+                    // Biểu đồ Tròn
+                    const pieCtx = document.getElementById('pieChart').getContext('2d');
+                    const pieChart = new Chart(pieCtx, {
+                        type: 'pie',
+                        data: {
+                            labels: ['Đảng viên được khen thưởng', 'Đảng viên bị kỉ luật'],
+                            datasets: [{
+                                data: [70, 30],
+                                backgroundColor: ['#ff6384', '#36a2eb']
+                            }]
+                        },
+                        options: {
+                            responsive: true
+                        }
+                    });
+                
+                    // Biểu đồ Cột
+                    const barCtx = document.getElementById('barChart').getContext('2d');
+                    const barChart = new Chart(barCtx, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Quý 1', 'Quý 2', 'Quý 3', 'Quý 4'],
+                            datasets: [{
+                                label: 'Số lượng đảng viên mới',
+                                data: [10, 20, 30, 0],
+                                backgroundColor: '#36a2eb'
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/asset/css/dashboard.css">
+    <link rel="stylesheet" href="/asset/css/themify-icons-font/themify-icons/themify-icons.css">
+    <title>Dashboard</title>
+    <style>
+        table{
+            border-collapse:collapse;
+            height: 100%;
+            width: 90%;
+            border-radius: 8px;
+        }   
+        thead{
+            height: 80px;
+        }
+        th, td{
+            padding: 4px;
+            font-size: 24px;
+        }
+        td a{
+            color: #000;
+            text-decoration: none;
+        }
+        .le{
+            background-color: #e9eefc;
+        }
+        .chan{
+            background-color: #F8F9FC;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            
+            <div class="header-content">
+                <div class="first">
+                        <img src="../asset/img/logo.png" alt="logo" class="logo">
+                        <input type="text" placeholder="Tìm Kiếm..." class="search">
+                        <i class="ti-search"></i>
+                    </div>
+                    
+                    <div class="second">
+                        <img src="../asset/img/avatar.jpg" alt="avatar" class="ava">
+                        <p class="name">Đỗ Minh Khoa</p>
+                        <input type="checkbox" hidden id="btnlogout" class="btnlogout">
+                        <label for="btnlogout"><i class="ti-angle-down"></i></label>
+                        <div class="logout">
+                        <div class="logoutcontent">
+                            <i class="ti-key"></i>
+                            <a href="" class="logoutlink">Đổi mật khẩu</a>
+                            </div>        
+                        <div class="logoutcontent">
+                            <i class="ti-shift-right"></i>
+                            <a href="../index.html" class="logoutlink">Đăng xuất</a>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    
+            
+            <div class="header-menu">
+                <div class="logomobile"><img src="../asset/img/logo.png" alt="logo" class="logo"></div>
+                
+                <div class="menumobile">
+                    <label for="btnmenu"><i class="ti-menu"></i></label>
+                </div>
+            </div>
+            
+        </div>
+        <input type="checkbox" class="btnmenu" id="btnmenu" hidden> 
+        <label for="btnmenu" class="nav-overlay"></label>
+        <div class="navmobile">
+            <div class="secondmobile">
+                <div class="user">
+                    <img src="../asset/img/avatar.jpg" alt="avatar" class="avamobile">
+                    <p class="namemobile">Đỗ Minh Khoa</p>
+                </div>
+                <label for="btnmenu" class="btnout"><i class="ti-close"></i></label>
+            </div>
+           
+            <div class="nav-linkdiv-mobile"><a href="dashboard.html" class="nav-link-mobile">Trang chủ</a></div>
+                <div class="nav-linkdiv-mobile"><a href="hosodangvien.html" class="nav-link-mobile">Hồ sơ Đảng viên</a></div>
+                <div class="nav-linkdiv-mobile"><a href="tochuccbvadb.html" class="nav-link-mobile">Tổ chức chi bộ và Đảng bộ</a></div>
+                <div class="nav-linkdiv-mobile"><a href="khenthuong.html" class="nav-link-mobile">Khen thưởng và kỷ luật</a></div>
+                <div class="nav-linkdiv-mobile"><a href="thongke.html" class="nav-link-mobile">Báo cáo và thống kê</a></div>
+                <div class="nav-linkdiv-mobile"><a href="tailieu.html" class="nav-link-mobile">Tài liệu Đảng</a></div>
+                <div class="nav-linkdiv-mobile"><a href="" class="nav-link-mobile">Đổi mật khẩu</a></div>
+                <div class="nav-linkdiv-mobile"><a href="" class="nav-link-mobile">Đăng xuất</a></div>
+        </div>
+        <div class="body">
+            <div class="navi">
+            <div class="emblem">
+                <img src="../asset/img/emblem.png" alt="emblem" class="img-emblem">
+            </div>
+            <div class="nav-linkdiv"><a href="dashboard.html" class="nav-link">Trang chủ</a></div>
+            <div class="nav-linkdiv"><a href="hosodangvien.html" class="nav-link">Hồ sơ Đảng viên</a></div>
+            <div class="nav-linkdiv"><a href="tochuccbvadb.html" class="nav-link">Tổ chức chi bộ và Đảng bộ</a></div>
+            <div class="nav-linkdiv"><a href="khenthuong.html" class="nav-link">Khen thưởng và kỷ luật</a></div>
+            <div class="nav-linkdiv"><a href="thongke.html" class="nav-link">Báo cáo và thống kê</a></div>
+            <div class="nav-linkdiv"><a href="tailieu.html" class="nav-link">Tài liệu Đảng</a></div>
+            <div class="quocky">
+                <img src="../asset/img/quocky.png" alt="" class="img-quocky">
+            </div>
+            </div>
+            <div class="news">
+                <div class="tieude"><h1>DANH SÁCH KHEN THƯỞNG VÀ KỶ LUẬT</h1></div>
+                <div class="tbl">
+                    <table>
+                        <thead class="le">
+                            <th>Mã Đảng viên</th>
+                            <th>Họ và tên</th>
+                            <th>Loại hình</th>
+                            <th>Ngày quyết định</th>
+                            <th>Lý do</th>
+                            <th>Xóa</th>
+                        </thead>
+                        <tbody>
+                            <tr class="chan">
+                                <td data-cell="Mã Đảng viên">DV9</td>
+                                <td data-cell="Họ và tên">Nguyễn Minh Hiếu</td>
+                                <td data-cell="Loại hình">Khen thưởng</td>
+                                <td data-cell="Ngày quyết định">19/08/2024</td>
+                                <td data-cell="Lý do">Hoạt động tốt</td>
+                                <td data-cell="Xóa"><i class="ti-trash"></i></td>
+                            </tr>
+                            <tr class="le">
+                                <td data-cell="Mã Đảng viên">DV10</td>
+                                <td data-cell="Họ và tên">Đỗ Minh Khoa</td>
+                                <td data-cell="Loại hình">Khen thưởng</td>
+                                <td data-cell="Ngày quyết định">19/08/2024</td>
+                                <td data-cell="Lý do">Hoạt động tốt</td>
+                                <td data-cell="Xóa"><i class="ti-trash"></i></td>
+                            </tr>
+                            <tr class="chan">
+                                <td data-cell="Mã Đảng viên">DV11</td>
+                                <td data-cell="Họ và tên">Nguyễn Công Toàn</td>
+                                <td data-cell="Loại hình">Khen thưởng</td>
+                                <td data-cell="Ngày quyết định">19/08/2024</td>
+                                <td data-cell="Lý do">Hoạt động tốt</td>
+                                <td data-cell="Xóa"><i class="ti-trash"></i></td>
+                            </tr>
+                            <tr class="le">
+                                <td data-cell="Mã Đảng viên">DV12</td>
+                                <td data-cell="Họ và tên">Nguyễn Văn Bách</td>
+                                <td data-cell="Loại hình">Kỷ luật</td>
+                                <td data-cell="Ngày quyết định">19/08/2024</td>
+                                <td data-cell="Lý do">Hoạt động chưa tốt</td>
+                                <td data-cell="Xóa"><i class="ti-trash"></i></td>
+                            </tr>
+                            <tr class="chan">
+                                <td data-cell="Mã Đảng viên">DV13</td>
+                                <td data-cell="Họ và tên">Đào Tiến Ngọc</td>
+                                <td data-cell="Loại hình">Khen thưởng</td>
+                                <td data-cell="Ngày quyết định">19/08/2024</td>
+                                <td data-cell="Lý do">Hoạt động tốt</td>
+                                <td data-cell="Xóa"><i class="ti-trash"></i></td>
+                            </tr>
+                            <tr class="le">
+                                <td data-cell="Mã Đảng viên">DV14</td>
+                                <td data-cell="Họ và tên">Nguyễn Vũ Hiếu</td>
+                                <td data-cell="Loại hình">Kỷ luật</td>
+                                <td data-cell="Ngày quyết định">19/08/2024</td>
+                                <td data-cell="Lý do">Hoạt động chưa tốt</td>
+                                <td data-cell="Xóa"><i class="ti-trash"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tblnew">
+                    <table>
+                        <tr class="chan">
+                            <td data-cell="Mã Đảng viên">DV9</td>
+                            <td data-cell="Họ và tên">Nguyễn Minh Hiếu</td>
+                            <td data-cell="Loại hình">Khen thưởng</td>
+                            <td data-cell="Xóa"><i class="ti-trash"></i></td>
+                        </tr>
+                        <tr class="le">
+                            <td data-cell="Mã Đảng viên">DV10</td>
+                            <td data-cell="Họ và tên">Đỗ Minh Khoa</td>
+                            <td data-cell="Loại hình">Khen thưởng</td>
+                            <td data-cell="Xóa"><i class="ti-trash"></i></td>
+                        </tr>
+                        <tr class="chan">
+                            <td data-cell="Mã Đảng viên">DV11</td>
+                            <td data-cell="Họ và tên">Nguyễn Công Toàn</td>
+                            <td data-cell="Loại hình">Khen thưởng</td>
+                            <td data-cell="Xóa"><i class="ti-trash"></i></td>
+                        </tr>
+                        <tr class="le">
+                            <td data-cell="Mã Đảng viên">DV12</td>
+                            <td data-cell="Họ và tên">Nguyễn Văn Bách</td>
+                            <td data-cell="Loại hình">Kỷ luật</td>
+                            <td data-cell="Xóa"><i class="ti-trash"></i></td>
+                        </tr>
+                        <tr class="chan">
+                            <td data-cell="Mã Đảng viên">DV13</td>
+                            <td data-cell="Họ và tên">Đào Tiến Ngọc</td>
+                            <td data-cell="Loại hình">Khen thưởng</td>
+                            <td data-cell="Xóa"><i class="ti-trash"></i></td>
+                        </tr>
+                        <tr class="le">
+                            <td data-cell="Mã Đảng viên">DV14</td>
+                            <td data-cell="Họ và tên">Nguyễn Vũ Hiếu</td>
+                            <td data-cell="Loại hình">Kỷ luật</td>
+                            <td data-cell="Xóa"><i class="ti-trash"></i></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="nut">
+                    <a href="themkhenthuong.html">Thêm đảng viên</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
