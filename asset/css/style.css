@@ -6,7 +6,7 @@
 
 body {
   font-family: "Arial", sans-serif;
-  background: url("https://oulyn1.github.io/dangvien/asset/img/background.png") no-repeat center center fixed;
+  background: url("/asset/img/background.png") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -69,14 +69,29 @@ body {
   font-size: 20px;
   text-decoration: none;
 }
+.logo{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.logo img{
+  width: 312;
+}
 
 .button:hover {
   background-color: #b71c1c;
+}
+@media (max-width:1542px) {
+  .logo{
+    display: none;
+  }
+  
 }
 @media only screen and (max-width: 768px) {
   .login-box {
     width: 500px;
   }
+  
 }
 
 
@@ -118,6 +133,9 @@ body {
     padding: 8px;
     font-size: 14px;
   }
+  .logo{
+    display: none;
+  }
 }
 @media only screen and (max-height: 480px){
   .login-box {
@@ -156,5 +174,8 @@ body {
   button {
     padding: 8px;
     font-size: 14px;
+  }
+  .logo{
+    display: none;
   }
 }
