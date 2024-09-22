@@ -354,6 +354,16 @@ body {
 .tblnew{
     display: none;
 }
+@media (max-width:1425px) {
+    .tailieudang{
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 4px; 
+        margin-left: 4px;
+        padding: 4px;
+        width: 99%;
+        height: 64%;
+    }
+}
 @media only screen and (max-width: 1023px) {
     .header{
         position: fixed;
@@ -436,14 +446,7 @@ body {
         padding: 8px 16px;
         font-size: 1rem;
     }
-    .tailieudang{
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 4px; 
-        margin-left: 4px;
-        padding: 4px;
-        width: 99%;
-        height: 64%;
-    }
+    
     .tailieudang .itemtl{
         background-color: #fe633d;
         text-align: center;
