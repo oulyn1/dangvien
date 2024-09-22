@@ -363,6 +363,9 @@ body {
   .pfirst img {
     width: 100%;
   }
+  .newsheader p{
+    font-size: 20px;
+  }
 }
 @media (max-width: 1650px) {
   .pfirst {
